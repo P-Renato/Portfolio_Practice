@@ -1,0 +1,143 @@
+:root{
+  --paragraph: "Roboto Mono", monospace; 
+  --navheader: "Kablammo", system-ui;
+  --robotText: "VT323", monospace;
+  --bgColor: linear-gradient(30deg, rgba(2, 2, 107, 0.74), rgba(22, 22, 116, 0.897));
+  --hrLongColor: linear-gradient(60deg,  rgba(73, 73, 73, 0.911), rgb(133, 129, 129));
+  
+
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--bgColor);
+  height: 15vh;
+
+
+
+  .myImageHeader {
+    display: flex;
+    width: 20vw;
+    height: 10vh;
+    justify-content: space-around;
+    align-items: center;
+    padding: .5em;
+    margin: .5em;
+    border: 3px solid white;
+    
+    img {
+      height: 2.5em;
+      border-radius: 12px 9px 12px 9px;
+    }
+    p {
+      font-family: var(--navheader);
+      color: white;
+    }
+  }
+
+  .centerNav{
+    min-width: 20%;
+    max-width: 60%;
+    max-height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    a {
+      color: white;
+      text-decoration: none;
+      font-family: var(--robotText);
+    }
+  }
+
+  .logos {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+
+    svg:last-child{
+
+    }
+    
+    svg{
+      min-width: 1.5em;
+      max-width: 2.5em;
+      padding: .5em;
+      min-height: 1.5em;
+      max-height: 3em;
+
+    }
+  }
+}
+
+hr {
+  background: var(--hrLongColor);
+  height: .4em;
+  
+}
+
+main {
+  width: 100%;
+  min-height: 50vh;
+  max-height: 80vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: var(--bgColor);
+
+
+  aside {
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+
+
+
+    p {
+      color: white;   
+      font-family: var(--paragraph);
+      
+      span {
+        font-family: var(--navheader);
+      }
+    }
+  }
+
+  aside p:nth-child(1){
+    font-size: 2rem;
+    padding: 2rem;
+  }
+
+  aside p:nth-child(2){
+    font-size: 2.3rem;
+    text-align: center;
+  }
+
+  aside p:nth-child(3){
+    font-size: 1.5rem;
+    text-align: end;
+  }
+  aside p:nth-child(4){
+    font-size: 1rem;
+    padding: 2rem;
+
+    span {
+      font-family: var(--robotText);
+      font-size: 1.5rem;
+    }
+  }
+
+  img {
+    min-height: 20vh;
+    max-height: 40vh;
+    min-width: 20vw;
+    max-width: 40vw;
+    padding: 3em;
+    
+  }
+}
